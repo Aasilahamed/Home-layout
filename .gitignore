@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+*.tsbuildinfo
+/public/FLOOR PLAN REV 01.pdf
+/public/engineer-plan.svg
