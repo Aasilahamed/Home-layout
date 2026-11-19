@@ -24,10 +24,12 @@ export default function Finishes({upper}: {upper: boolean}) {
     </defs>
     <rect x="47" y="104" width="474" height="596" fill="url(#stone)"/>
     {upper ? <>
+      <rect x="40" y="6" width="488" height="98" fill="url(#oak)"/>
       <rect x="47" y="104" width="474" height="273" fill="url(#oak)"/>
-      <path d="M47 104h150v91H47z M47 279h150v98H47z" fill="url(#wet-tile)"/>
-      <rect x="47" y="700" width="474" height="405" fill="url(#oak)"/>
-      <path d="M47 700h171v82H47z M360 700h161v82H360z" fill="url(#wet-tile)"/>
+      <path d="M40 6h137v98H40z M391 6h137v98H391z" fill="url(#wet-tile)"/>
+      <rect x="47" y="700" width="474" height="405" fill="url(#stone)"/>
+      <rect x="331" y="782" width="190" height="323" fill="url(#oak)"/>
+      <rect x="331" y="700" width="190" height="82" fill="url(#wet-tile)"/>
       <rect x="40" y="1105" width="488" height="66" fill="url(#paver)"/>
     </> : <>
       <rect x="40" y="6" width="488" height="98" fill="url(#wet-tile)"/>
