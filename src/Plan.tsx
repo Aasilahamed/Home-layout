@@ -11,7 +11,7 @@ const shell: Wall[] = [
 ]
 const ground: Wall[] = [
   ['utility west',40,6,40,104], ['utility north',40,6,528,6], ['utility east',528,6,528,104],
-  ['kitchen to toilet',229,110,229,315], ['wardrobe end',229,315,262,315],
+  ['kitchen to toilet',229,110,229,315],
   ['toilet south',229,246,312,246], ['bedroom west',312,104,312,377],
   ['bedroom to hall',311,377,521,377],
   ['portico west',40,704,40,1112], ['portico south',40,1112,528,1112], ['portico east',528,704,528,1112],
@@ -60,7 +60,14 @@ function Furniture({upper}:{upper:boolean}) {
   return <g stroke="#a69a7f" strokeWidth="1.6" fill="#faf6ec">
     <g aria-label="Hall seating"><rect x="195" y="432" width="122" height="43" rx="7"/><path d="M202 440h108v27H202z M256 440v27"/><rect x="322" y="477" width="40" height="120" rx="7"/><path d="M330 485h24v104h-24z M330 536h24"/><rect x="252" y="505" width="40" height="53"/>{[196,261].map(x=><rect key={x} x={x} y="597" width="48" height="42" rx="6"/>)}</g>
     {upper ? <><Bed x={416} y={372} turn={180}/><Bed x={56} y={970} turn={-90}/><Bed x={515} y={872} turn={90}/></> :
-    <><Bed x={509} y={197} turn={90}/><path d="M116 113h108v219h-35V151h-73z" fill="#d8c5ac"/><rect x="124" y="118" width="48" height="24" rx="5"/><circle cx="206" cy="181" r="9"/><circle cx="206" cy="210" r="9"/>
+    <><Bed x={509} y={197} turn={90}/><path d="M116 113h108V315h-35V151h-73z" fill="#d8c5ac"/><rect x="124" y="118" width="48" height="24" rx="5"/><circle cx="206" cy="181" r="9"/><circle cx="206" cy="210" r="9"/>
+    <g aria-label="Dining handwash basin" transform="translate(244 250)">
+      <rect width="53" height="31" rx="4" fill="#d6c7af"/>
+      <ellipse cx="26.5" cy="17" rx="20" ry="10" fill="#fafbf7" stroke="#91a59c"/>
+      <circle cx="26.5" cy="18" r="1.5" fill="#859790"/>
+      <path d="M26.5 3v8" stroke="#687c76" strokeWidth="3" strokeLinecap="round"/>
+      <text x="26.5" y="48" textAnchor="middle" stroke="none" fill="#263e34" fontSize="13">Handwash</text>
+    </g>
     {[83,132].map(x=><g key={x}><rect x={x} y="350" width="30" height="23" rx="5"/><rect x={x} y="419" width="30" height="23" rx="5"/></g>)}
     <rect x="73" y="368" width="99" height="57" rx="9" fill="url(#oak)"/>
     {['Dishwasher','Washer','Wash stone','Fire stove'].map((name,i)=><g key={name} transform={`translate(${117+i*78} 12)`}><rect width="66" height="40" rx="3" fill={i===2?'#acada4':'#e3e8e4'}/>{i===1||i===3?<circle cx="33" cy="13" r="9" fill={i===1?'#97b9c0':'#605449'}/>:<path d="M8 9h50m-50 6h50"/>}<text x="33" y="34" textAnchor="middle" stroke="none" fill="#243b34" fontSize="11">{name}</text></g>)}
