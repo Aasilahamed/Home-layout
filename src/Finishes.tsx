@@ -33,11 +33,12 @@ export default function Finishes({upper}: {upper: boolean}) {
       <rect x="40" y="1105" width="488" height="66" fill="url(#paver)"/>
     </> : <>
       <rect x="40" y="6" width="488" height="98" fill="url(#wet-tile)"/>
+      <rect x="-18.6" y="6" width="154.6" height="60" fill="#e9eee0"/>
       <rect x="229" y="104" width="83" height="142" fill="url(#wet-tile)"/>
       <rect x="312" y="104" width="209" height="273" fill="url(#oak)"/>
       <rect x="40" y="700" width="488" height="412" fill="url(#paver)"/>
     </>}
-    <rect x="211" y="466" width="137" height="144" rx="3" fill="#d1b79e"/>
-    <rect x="216" y="471" width="127" height="134" rx="2" fill="none" stroke="#efe1cf" strokeWidth="3"/>
+    {!upper && <><rect x="211" y="466" width="137" height="144" rx="3" fill="#d1b79e"/>
+    <rect x="216" y="471" width="127" height="134" rx="2" fill="none" stroke="#efe1cf" strokeWidth="3"/></>}
   </g>
 }
