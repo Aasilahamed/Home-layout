@@ -36,3 +36,14 @@ dd { margin:0; font-weight:600; }
 @media(max-width:700px){.viewer{grid-template-columns:1fr}.viewer figure{padding:10px}}
 @media (max-width: 800px) { .plans { grid-template-columns: 1fr; } }
 @media print { main { padding: 0; } header a, footer { display: none; } figure { break-inside: avoid; } }
+.model-panel { border:1px solid #cbd5c9; border-radius:12px; overflow:hidden; background:#fff; }
+.model-toolbar { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding:22px; }
+.model-toolbar p { margin:8px 0 0; font-size:.9rem; }
+.model-buttons { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.model-buttons button { font:inherit; cursor:pointer; border:1px solid #bdcabe; border-radius:6px; padding:10px 14px; background:#f1f5ef; color:#254b3d; }
+.model-buttons button[aria-pressed=true] { background:#254b3d; color:white; }
+button:focus-visible { outline:3px solid #b18a4a; outline-offset:3px; }
+.model-canvas { width:100%; height:min(76vh,850px); min-height:430px; }
+.model-canvas canvas { display:block; touch-action:none; }
+.model-note { padding:16px 22px; margin:0; font-size:.875rem; line-height:1.6; border-top:1px solid #d8ded4; }
+@media(max-width:700px){.model-toolbar{padding:16px}.model-buttons button{font-size:.85rem;padding:9px}.model-canvas{height:65vh;min-height:360px}}

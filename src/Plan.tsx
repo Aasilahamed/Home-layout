@@ -5,7 +5,7 @@ import Stairs from './Stairs'
 type Wall = [name: string, x1: number, y1: number, x2: number, y2: number]
 type Room = [name: string, size: string, x: number, y: number]
 type Opening = [id: string, x: number, y: number, width: number, rotation: number]
-const shell: Wall[] = [
+export const shell: Wall[] = [
   ['west facade', 47,104,47,700], ['north facade',47,104,521,104],
   ['east facade',521,104,521,700], ['hall south',47,700,521,700],
 ]
@@ -15,7 +15,7 @@ const upperShell: Wall[] = [
   ['rear east facade',528,6,528,104], ['west corner',40,104,47,104],
   ['east corner',521,104,528,104],
 ]
-const ground: Wall[] = [
+export const ground: Wall[] = [
   ['utility west',40,66,40,104], ['utility north',40,6,528,6], ['utility east',528,6,528,104],
   ['rear common bath north',-18.6,6,40,6], ['rear common bath west',-18.6,6,-18.6,66],
   ['rear common bath east',136,6,136,66], ['rear common bath south',-18.6,66,136,66],
@@ -51,11 +51,11 @@ const firstRooms: Room[] = [
   ['Guest room','Single bed + ensuite',423,1060],
   ['Balcony','',186,1141], ['Balcony','',428,1141],
 ]
-const doors: Opening[][] = [
+export const doors: Opening[][] = [
   [['utility entry',162,104,51,0],['rear common bath door',-10,66,44,0],['ensuite from bedroom',312,198,44,90],['bedroom entry',312,370,53,-90],['front entry',94,700,78,0]],
   [['west ensuite',123,104,44,0],['east ensuite',403,104,44,0],['west master door',202,377,53,0],['east master door',305,377,53,0],['guest room entry',331,825,53,90],['east bath',365,782,44,0],['west balcony',278,1105,53,180],['east balcony',348,1105,53,0]],
 ]
-const windows: Opening[][] = [
+export const windows: Opening[][] = [
   [['kitchen north',116,104,34,0],['bedroom east',521,112,78,90],['kitchen west',47,282,78,90],['double-height hall window',47,480,128,90],['hall south',201,700,78,0]],
   [['west master window',47,200,117,90],['suite east',521,200,117,90],['double-height hall window',47,480,128,90],['west bedroom',47,825,78,90],['east bedroom',521,825,78,90],['west ensuite vent',71,6,39,0],['east ensuite vent',458,6,39,0],['east bath vent',521,705,39,90]],
 ]
