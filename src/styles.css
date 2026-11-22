@@ -18,7 +18,7 @@ footer { padding: 20px 0; }
 .furnishings { filter: drop-shadow(1.5px 3px 2px #4e412d55); }
 .furnishings [aria-label="Hall seating"] { fill:#d0dcd2; stroke:#8a9d90; }
 .furnishings [aria-label="Hall seating"] > rect:nth-child(5) { fill:url(#oak); }
-.furnishings g[transform*="788"] > path { fill:#647b80; stroke:#55686c; }
+.furnishings g[aria-label="Car"] > path { fill:#647b80; stroke:#55686c; }
 nav { display:flex; gap:4px; margin:18px 0; padding:4px; width:fit-content; background:#e2e6df; border-radius:9px; }
 nav button { border:0; border-radius:6px; background:transparent; color:#334f40; padding:11px 20px; font:inherit; cursor:pointer; }
 nav button[aria-pressed=true] { color:white; background:#254b3d; }

@@ -10,5 +10,5 @@ export function stairTreads(floorHeight = 10) {
   for (let i = 0; i < 12; i++) footprints.push([455, 439 + (11 - i) * 16.25, 58, 16.25])
   footprints.push([455, 380, 58, 59])
   for (let i = 0; i < 3; i++) footprints.push([455 - (i + 1) * 50 / 3, 380, 50 / 3, 59])
-  return footprints.map(([x, z, width, depth], i) => ({ x, z, width, depth, height: (i + 1) * floorHeight / footprints.length }))
+  return footprints.reverse().map(([x, z, width, depth], i) => ({ x, z: z + 55, width, depth, height: (i + 1) * floorHeight / footprints.length }))
 }

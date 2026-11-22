@@ -20,8 +20,10 @@ test('stairs reach the assumed floor height with equal rises inside the traced f
   for (const tread of treads) {
     assert.ok(Math.abs(tread.height - previous - 10 / 19) < 1e-10)
     assert.ok(tread.x >= 405 - 1e-10 && tread.x + tread.width <= 513 + 1e-10)
-    assert.ok(tread.z >= 380 && tread.z + tread.depth <= 694)
+    assert.ok(tread.z >= 435 && tread.z + tread.depth <= 749)
     previous = tread.height
   }
-  assert.equal(treads.at(-1).x, 405)
+  assert.equal(treads[0].x, 405)
+  assert.equal(treads[0].z, 435)
+  assert.equal(treads.at(-1).z, 689)
 })
